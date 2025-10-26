@@ -17,16 +17,12 @@ a = {
    "Parameter": "A variable used to pass information into a function."
 }
 
-print("Available words:\n")
-for word in a.keys():
-    print("-", word)
+print("\nSelect anyone word ")
+for words in a:
+    print(words)
+select=input("\nEnter the word that you want to know the meaning of:")
 
-choice = input("\nEnter the word you want to know the meaning of: ")
-
-# Convert input to title case to match keys (e.g., algorithm → Algorithm)
-choice = choice.capitalize()
-
-if choice in a:
-    print(f"\n Meaning of '{choice}':\n{a[choice]}")
+if select in a:
+    print(f" \n The meaning of '{select}' is {a[select]}")
 else:
-    print("\n Sorry, that word is not in the dictionary.")
+    print("You Choose the wrong word")
